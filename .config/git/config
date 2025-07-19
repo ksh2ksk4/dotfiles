@@ -1,0 +1,7 @@
+[user]
+  name = ksh2ksk4
+  email = github.clicker425@passinbox.com
+[init]
+  defaultBranch = main
+[alias]
+  l = log --follow --graph
