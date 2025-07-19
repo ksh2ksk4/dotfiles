@@ -1,0 +1,10 @@
+[a-z]*
+!fish/
+!fish/**
+fish/conf.d/
+fish/conf.d/**
+fish/fish_variables
+!git/
+!git/**
+!rclone/
+!rclone/**

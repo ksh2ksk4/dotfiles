@@ -1,0 +1,7 @@
+.[a-z]*
+!.gitignore
+!.config/
+!.config/**
+
+share
+*.code-workspace
