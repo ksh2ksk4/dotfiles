@@ -1,6 +1,8 @@
 [a-z]*
 !alacritty/
 !alacritty/**
+alacritty/themes/
+alacritty/themes/**
 !fish/
 !fish/**
 fish/conf.d/
