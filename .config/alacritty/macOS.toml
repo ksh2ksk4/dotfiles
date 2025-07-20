@@ -1,0 +1,9 @@
+[font]
+size = 18.0
+
+[terminal.shell]
+args = ["--login"]
+program = "/usr/local/bin/fish"
+
+[window]
+dimensions = {columns = 120, lines = 100}

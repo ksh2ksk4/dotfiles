@@ -1,0 +1,6 @@
+[general]
+import = [
+    "./common.toml",
+    "./macOS.toml",
+    "./Windows.toml"
+]

@@ -1,0 +1,18 @@
+[general]
+import = ["./themes/themes/gruvbox_material.toml"]
+
+[font]
+bold = {family = "PlemolJP Console NF", style = "Bold"}
+bold_italic = {family = "PlemolJP Console NF", style = "Bold Italic"}
+italic = {family = "PlemolJP Console NF", style = "Italic"}
+normal = {family = "PlemolJP Console NF", style = "Regular"}
+
+[mouse]
+bindings = [{mouse = "Right", mods = "None", action = "Paste"}]
+hide_when_typing = false
+
+[selection]
+save_to_clipboard = true
+
+[window]
+opacity = 0.8
