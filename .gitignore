@@ -3,5 +3,4 @@
 !.config/
 !.config/**
 
-share
-*.code-workspace
+[a-zA-Z]*
