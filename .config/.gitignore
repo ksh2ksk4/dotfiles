@@ -1,4 +1,6 @@
 [a-z]*
+!alacritty/
+!alacritty/**
 !fish/
 !fish/**
 fish/conf.d/
