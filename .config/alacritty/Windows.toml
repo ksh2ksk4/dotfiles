@@ -1,0 +1,12 @@
+[font]
+# Windows のディスプレイは 150% 表示になっているため
+size = 12.0
+
+[terminal.shell]
+args = ["--login"]
+# MSYS2 環境で利用する
+program = "C:/msys64/usr/bin/bash.exe"
+
+[window]
+dimensions = {columns = 120, lines = 70}
+position = {x = 2048, y = 0}
