@@ -7,3 +7,5 @@
   l = log --follow --graph
 [safe]
   directory = /System/Volumes/Data/mnt/dogwood/share/*
+[pull]
+  ff = only
