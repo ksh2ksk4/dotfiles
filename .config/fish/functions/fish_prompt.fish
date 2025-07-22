@@ -103,7 +103,7 @@ function fish_prompt -d 'Write out the prompt'
     set -l is_inside_work_tree \
         (git rev-parse --is-inside-work-tree 2>/dev/null)
 
-    if test -n "$is_inside_work_tree"
+    if [ -n "$is_inside_work_tree" ]
         set -l current_branch '?'
 
         # コミットがあるかどうか
@@ -111,12 +111,12 @@ function fish_prompt -d 'Write out the prompt'
             set current_branch (git rev-parse --abbrev-ref @)
         end
 
-        if test -n "$current_branch"
+        if [ "$current_branch" != "?" ]
             # リポジトリにブランチが存在する場合
             set -l git_branch_status '🙆'
             set -l files (git status --porcelain)
             # コミットしていないものがある場合
-            test -n "$files" && set git_branch_status '🤔'
+            [ -n "$files" ] && set git_branch_status '🤔'
             set git_prompt \
                 (printf '%s[%s:%s]%s' \
                     $cyan $current_branch $git_branch_status $normal)
@@ -125,7 +125,7 @@ function fish_prompt -d 'Write out the prompt'
 
     set last_cmd_status (printf '%s%d%s' $brred $last_cmd_status $normal)
     set -l symbol '$'
-    test "$USER" = 'root' && set symbol '#'
+    [ "$USER" = 'root' ] && set symbol '#'
 
     printf '%s\n[%s %s:%s]\n[%s]%s[%s]%s ' \
             $border_line \
