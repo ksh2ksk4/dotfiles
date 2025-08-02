@@ -12,5 +12,7 @@ fish/fish_variables
 !git/**
 !rclone/
 !rclone/**
+!spf/
+!spf/**
 !tmux/
 !tmux/**
