@@ -1,0 +1,5 @@
+#--show-all
+#--nonprintable-notation=unicode
+--binary=as-text
+--pager=builtin
+--theme="Catppuccin Mocha"
