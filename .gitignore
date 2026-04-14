@@ -1,6 +1,24 @@
-.[a-z]*
-!.gitignore
-!.config/
-!.config/**
+/[a-zA-Z]*
+/.[a-zA-Z]*
 
-[a-zA-Z]*
+!/.gitignore
+!/.bin
+!/.bin/**
+!/.config
+!/.config/alacritty
+!/.config/alacritty/**
+!/.config/atuin
+!/.config/atuin/**
+!/.config/bat
+!/.config/bat/**
+!/.config/git
+!/.config/git/**
+!/.config/systemd
+!/.config/systemd/**
+!/.config/tmux
+!/.config/tmux/**
+!/.config/zsh
+!/.config/zsh/**
+
+# Rust インストール時に自動生成されたので
+/.zshenv
