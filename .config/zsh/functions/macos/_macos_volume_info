@@ -1,0 +1,3 @@
+# Get volume settings
+
+osascript -e 'get volume settings'

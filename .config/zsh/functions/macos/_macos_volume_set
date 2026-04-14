@@ -1,0 +1,9 @@
+# Set volume
+
+if [[ -z "$1" ]]; then
+    print 'Usage: macos volume set <0-100>'
+
+    return 1
+fi
+
+osascript -e "set volume output volume $1"

@@ -1,0 +1,26 @@
+#
+
+if [[ $# -eq 0 ]]; then
+    _macos_help
+
+    return 0
+fi
+
+local subcommand="$1"
+shift
+
+case "${subcommand}" in
+    'help')
+        _macos_help
+        ;;
+    'volume')
+        _macos_volume "$@"
+        ;;
+    *)
+        print "Unknown subcommand: ${subcommand}"
+
+        return 1
+        ;;
+esac
+
+return 0

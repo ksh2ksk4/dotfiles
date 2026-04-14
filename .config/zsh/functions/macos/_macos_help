@@ -1,0 +1,8 @@
+#
+
+cat << EOD
+Usage: macos <subcommand> [args]
+Available subcommands:
+    help
+    volume
+EOD
