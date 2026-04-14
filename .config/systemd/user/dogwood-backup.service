@@ -1,0 +1,7 @@
+[Unit]
+Description = Dogwood daily backup service
+
+[Service]
+Type = oneshot
+Environment = "HOME=/home/ksh2ksk4"
+ExecStart = /home/ksh2ksk4/.bin/dogwood-backup.sh
