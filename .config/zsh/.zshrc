@@ -12,7 +12,7 @@ function load_per_host_settings() {
         me="$(hostnamectl --static)"
     fi
 
-    [[ -f "${ZDOTDIR}/${me}.sh" ]] && source "${ZDOTDIR}/${me}.sh"
+    [[ -f "${ZDOTDIR}/hosts/${me}.sh" ]] && source "${ZDOTDIR}/hosts/${me}.sh"
 }
 
 load_per_host_settings
