@@ -1,7 +1,21 @@
 #
-# 個人専用設定
+# ホスト個別設定
 #
-[[ -f "${HOME}/config/zsh/my.sh" ]] && source "${HOME}/config/zsh/my.sh"
+function load_per_host_settings() {
+    local me=""
+
+    if [[ "$(uname)" == "Darwin" ]]; then
+        # macOS の場合
+        me="$(hostname -s)"
+    elif [[ "$(uname)" == "Linux" ]]; then
+        # Arch Linux の場合
+        me="$(hostnamectl --static)"
+    fi
+
+    [[ -f "${ZDOTDIR}/${me}.sh" ]] && source "${ZDOTDIR}/${me}.sh"
+}
+
+load_per_host_settings
 
 #
 # Misc
@@ -11,16 +25,11 @@ export LANG='ja_JP.UTF-8'
 export LC_TIME='C'
 export PAGER='bat'
 
-alias l@='ll -@'
-
-# zsh-abbr が必要?
-#abbr -a --set-cursor -- df 'df -h%'
-
 #
 # Oh My Zsh
 #
 # 非常に紛らわしいが Oh My Zsh のインストールディレクトリを示す環境変数
-export ZSH="${HOME}/.oh-my-zsh"
+export ZSH="${ZDOTDIR}/oh-my-zsh"
 
 zstyle ':omz:update' mode reminder
 zstyle ':omz:update' frequency 30
@@ -86,27 +95,12 @@ export PROMPT="$(get_prompt)"
 export RPROMPT="$(get_rprompt)"
 
 #
-# tmux
-#
-function tmux_set_status_style() {
-    ${HOME}/.config/tmux/set_status_style.sh
-}
-
-autoload -Uz add-zsh-hook
-add-zsh-hook chpwd tmux_set_status_style
-# フック関数を実行するため
-cd "${PWD}"
-
-#
-# compinit
-#
-# キャッシュファイルは ZDOTDIR(デフォルトはホームディレクトリ)直下に作成される
-# ZDOTDIR を変更すると他のドットファイルにも影響が及ぶため、手動削除で対応する
-rm -f "${HOME}/.zcompdump-$(hostname -s)-${ZSH_VERSION}"*
-autoload -Uz compinit
-compinit -C -d "${HOME}/.cache/zsh/zcompdump-$(hostname -s)-${ZSH_VERSION}"
-
-#
 # atuin
 #
 eval "$(atuin init zsh)"
+
+#
+# alias
+#
+alias df='df -h'
+alias l@='ll -@'
