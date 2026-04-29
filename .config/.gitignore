@@ -16,3 +16,8 @@ fish/fish_variables
 !spf/**
 !tmux/
 !tmux/**
+!zsh/
+!zsh/**
+zsh/.zcompdump-*
+zsh/oh-my-zsh/
+zsh/oh-my-zsh/**

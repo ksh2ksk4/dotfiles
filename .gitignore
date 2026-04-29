@@ -19,6 +19,4 @@
 !/.config/tmux/**
 !/.config/zsh
 !/.config/zsh/**
-
-# Rust インストール時に自動生成されたので
-/.zshenv
+!/.zshenv
