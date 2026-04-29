@@ -2,4 +2,5 @@
 import = [
     "./common.toml",
     "./macOS.toml",
+    "./ArchLinux.toml",
 ]
