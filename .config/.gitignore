@@ -10,6 +10,8 @@ fish/conf.d/**
 fish/fish_variables
 !git/
 !git/**
+!hypr/
+!hypr/**
 !rclone/
 !rclone/**
 !spf/
