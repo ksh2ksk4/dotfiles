@@ -1,1 +1,0 @@
-/Users/ksh2ksk4/.config/zsh/.zshenv

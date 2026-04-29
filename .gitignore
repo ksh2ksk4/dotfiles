@@ -20,3 +20,4 @@
 !/.config/zsh
 !/.config/zsh/**
 !/.zshenv
+!/README.md
