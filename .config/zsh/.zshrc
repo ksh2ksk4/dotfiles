@@ -21,6 +21,8 @@
 
     alias df='df -h'
     alias l@='ll -@'
+    # .viminfo を出力しない
+    alias vim='vim -i NONE'
 }
 # Oh My Zsh
 () {
