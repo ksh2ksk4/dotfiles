@@ -92,3 +92,5 @@
 () {
     eval "$(atuin init zsh)"
 }
+# Ollama
+export OLLAMA_KEEP_ALIVE="60m"
