@@ -80,13 +80,13 @@
     }
 
     function get_rprompt() {
-        # 変数の値を返す訳ではないのでダブルクォートではなくシングルクォート
-        local git_prompt='${vcs_info_msg_0_}'
+        local git_prompt="${vcs_info_msg_0_}"
         echo "${git_prompt}"
     }
 
-    export PROMPT="$(get_prompt)"
-    export RPROMPT="$(get_rprompt)"
+    # ダブルクォートではなくシングルクォート(コマンドの実行結果ではなくコマンド自体を返すように)
+    export PROMPT='$(get_prompt)'
+    export RPROMPT='$(get_rprompt)'
 }
 # atuin
 () {
