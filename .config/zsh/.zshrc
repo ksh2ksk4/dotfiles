@@ -85,7 +85,7 @@
 }
 # プロンプト
 () {
-    autoload -Uz vcs_info
+    autoload -U vcs_info
     precmd() { vcs_info }
 
     zstyle ':vcs_info:git:*' formats '(%b)'
@@ -114,4 +114,6 @@
     eval "$(atuin init zsh)"
 }
 # Ollama
-export OLLAMA_KEEP_ALIVE="60m"
+() {
+    export OLLAMA_KEEP_ALIVE="60m"
+}
