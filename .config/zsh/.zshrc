@@ -12,6 +12,27 @@
 
     [[ -f "${ZDOTDIR}/hosts/${me}.sh" ]] && source "${ZDOTDIR}/hosts/${me}.sh"
 }
+# Functions
+() {
+    mc() {
+        # Create a directory then change to it
+        command mkdir "${@}"
+
+        if [[ $? -eq 0 ]]; then
+            local arg="${@[-1]}"
+
+            case "${arg}" in
+                -*)
+                    # オプションの場合
+                    ;;
+                *)
+                    cd "${arg}"
+                    return
+                    ;;
+            esac
+        fi
+    }
+}
 # Misc
 () {
     export EDITOR="$(which vim)"
